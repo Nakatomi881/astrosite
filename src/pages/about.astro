@@ -12,14 +12,24 @@ const profilerPicture = 'public/business.jpg'
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>About</h1>	<h1>Tonya Call</h1>
-		<div>
+		
+		<div class="profile">
+            <h1>About</h1>	
+            <h1>Tonya Call</h1>
 			<img 
 				alt="Tonya Call" 
 				width="400px" 
 				height="400px" 
+                class="profile__image"
 				src={profilerPicture}
 			/>
 		</div>
 	</body>
 </html>
+
+<style>
+    .profile__image {
+        border-radius: 25%;
+    }
+
+</style>
