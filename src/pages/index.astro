@@ -1,16 +1,171 @@
 ---
-
+// component script section
+import "../styles/global.css";
+import Main from "../layouts/Main.astro";
+const heroImage = "/Male-and-female-sculpture.jpg";
+const redflag = "/redflag.jpg";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Tonya Call</h1>
-	</body>
-</html>
+<!-- component template -->
+<Main>
+  <div class="hero__wrapper">
+    <div class="hero">
+      <img alt="Hero image" class="hero__image" src={heroImage} />
+    </div>
+    <div class="header">
+      <div class="header__content">
+        <div class="left__header">Tonya Call</div>
+        <nav class="Main__nav">
+          <a href="#">Home</a>
+          <a href="#">Books</a>
+          <a href="https://femalediary.com">Blog</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="right__header">
+          <a href="/about">About</a>
+        </div>
+      </div>
+    </div>
+
+	
+  
+    <div class="book__section">
+      <div class="book">
+        <img alt="I'm a red flag" class="red__flag" src={redflag} />
+      </div>
+      <div class="buy__wrapper">
+        <a href="https://www.amazon.com/your-book-link"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="buy__button">
+        Buy Now!
+      </a>
+      </div>
+      
+    
+
+    <div class="book__description__wrapper">
+      <!-- placeholder for future right-side content -->
+    </div>
+  </div>
+  
+  </div>
+
+  
+</Main>
+
+<style>
+  .hero__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    background-repeat: no-repeat;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+
+  .Main__nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .Main__nav a,
+  .right__header a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+
+  .right__header,
+  .left__header {
+    font-weight: bold;
+    font-size: 1.25rem;
+    font-color: black;
+  }
+
+
+  .book__section {
+    position: absolute;
+    top: 125px;
+    left: 115px;
+  	
+    margin: 20px;
+  }
+
+  .book {
+    margin-bottom: 1rem;
+  }
+
+  .red__flag {
+    width: clamp(150px, 25vw, 600px);
+    height: auto;
+  }
+
+  .buy__wrapper {
+    
+    width: 100%;
+    
+    
+  }
+
+  .buy__button {
+    
+    margin-left: auto;
+    margin-right: auto;
+	  padding: .5rem 1rem;
+	  text-decoration: none;
+	  border: 2px solid red;
+    outline-color: transparent;
+	  background-color: #8fbc8f;
+    font-size: 1rem;
+    border-radius: 25%;
+	  text-align: center;
+    cursor: pointer;
+    transition-duration:  0.2s ease-in-out;
+  }
+
+  .buy__button:is(:hover, :focus) {
+    box-shadow: 0 0 3px 3px;
+    background-color: #8fbc8f;
+	
+  }
+
+
+@media (max-width: 768px) {
+  .book__overlay {
+    position: static;         /* remove absolute layout */
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__wrapper {
+    height: auto;             /* allow content to expand */
+  }
+}
+
+</style>

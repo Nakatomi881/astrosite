@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+const profilerPicture = 'public/business.jpg'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Learn more about Tonya Call's journey and mission."/>
+		<title>About Tonya Call</title>
+	</head>
+	<body>
+		
+		<div class="profile">
+            <h1>About</h1>	
+            <h1>Tonya Call</h1>
+			<img 
+				alt="Tonya Call" 
+				width="400px" 
+				height="400px" 
+                class="profile__image"
+				src={profilerPicture}
+			/>
+		</div>
+
+        
+	</body>
+</html>
+
+<style>
+    .profile__image {
+        border-radius: 25%;
+    }
+
+    .main__nav {
+        position: absolute;
+        right: 100px;
+    }
+
+</style>
