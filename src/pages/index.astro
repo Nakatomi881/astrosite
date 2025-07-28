@@ -28,7 +28,7 @@ const redflag = "/redflag.jpg";
     </div>
 
 	
-  
+  <div class="'book__wrapper">
     <div class="book__section">
       <div class="book">
         <img alt="I'm a red flag" class="red__flag" src={redflag} />
@@ -42,7 +42,7 @@ const redflag = "/redflag.jpg";
       </a>
       </div>
       
-    
+    </div>
 
     <div class="book__description__wrapper">
       <!-- placeholder for future right-side content -->
@@ -58,7 +58,7 @@ const redflag = "/redflag.jpg";
   .hero__wrapper {
     position: relative;
     width: 100%;
-    height: 100vh;
+   
     
   }
 
@@ -107,13 +107,15 @@ const redflag = "/redflag.jpg";
     font-color: black;
   }
 
+  .book__wrapper {
+
+  }
 
   .book__section {
     position: absolute;
     top: 125px;
     left: 115px;
-  	
-    margin: 20px;
+  	margin: 20px;
   }
 
   .book {
@@ -126,9 +128,10 @@ const redflag = "/redflag.jpg";
   }
 
   .buy__wrapper {
-    
+    display: flex;
+    justify-content: center;
     width: 100%;
-    
+    margin: auto;
     
   }
 
