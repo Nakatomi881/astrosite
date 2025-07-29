@@ -15,7 +15,7 @@ const redflag = "/redflag.jpg";
     <div class="header">
       <div class="header__content">
         <div class="left__header">Tonya Call</div>
-        <nav class="Main__nav">
+        <nav class="main__nav">
           <a href="#">Home</a>
           <a href="#">Books</a>
           <a href="https://femalediary.com">Blog</a>
@@ -28,7 +28,7 @@ const redflag = "/redflag.jpg";
     </div>
 
 	
-  <div class="'book__wrapper">
+
     <div class="book__section">
       <div class="book">
         <img alt="I'm a red flag" class="red__flag" src={redflag} />
@@ -46,8 +46,10 @@ const redflag = "/redflag.jpg";
 
     <div class="book__description__wrapper">
       <!-- placeholder for future right-side content -->
+       <h1>I'm the Red Flag</h1>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nisi dolore possimus maxime. Laboriosam itaque, veniam, non id minus distinctio aliquam asperiores ad debitis placeat ut corrupti, quas consequatur quam.</p>
     </div>
-  </div>
+  
   
   </div>
 
@@ -88,22 +90,23 @@ const redflag = "/redflag.jpg";
     padding: 1rem 2rem;
   }
 
-  .Main__nav {
+  .main__nav {
     display: flex;
     gap: 1.5rem;
+    
   }
 
-  .Main__nav a,
+  .main__nav a,
   .right__header a {
     text-decoration: none;
     color: black;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .right__header,
   .left__header {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-color: black;
   }
 
@@ -113,8 +116,8 @@ const redflag = "/redflag.jpg";
 
   .book__section {
     position: absolute;
-    top: 125px;
-    left: 115px;
+    top: 175px;
+    left: 300px;
   	margin: 20px;
   }
 
@@ -123,7 +126,7 @@ const redflag = "/redflag.jpg";
   }
 
   .red__flag {
-    width: clamp(150px, 25vw, 600px);
+    width: clamp(120px, 20vw, 600px);
     height: auto;
   }
 
@@ -157,6 +160,11 @@ const redflag = "/redflag.jpg";
 	
   }
 
+  .book__description__wrapper {
+    display: grid;
+    grid-template-columns: "book description";
+    
+  }
 
 @media (max-width: 768px) {
   .book__overlay {
