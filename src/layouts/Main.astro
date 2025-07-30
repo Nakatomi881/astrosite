@@ -1,3 +1,9 @@
+---
+import Navigationbar from "../components/NavigationBar.astro"
+import Footer from "../components/footer.astro"
+---
+
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -10,7 +16,9 @@
 	</head>
 <body>
     <main>
+		<Navigationbar />
         <slot />
+		<Footer />
     </main>
 
 </body>

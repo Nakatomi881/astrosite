@@ -1,5 +1,64 @@
 ---
 
 ---
+ <div class="header">
+      <div class="header__content">
+        <div class="left__header">Tonya Call</div>
+        <nav class="main__nav">
+          <a href="#">Home</a>
+          <a href="#">Books</a>
+          <a href="https://femalediary.com">Blog</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="right__header">
+          <a href="/about">About</a>
+        </div>
+      </div>
+    </div>
 
 
+
+<style>
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+
+  .main__nav {
+    display: flex;
+    gap: 1.5rem;
+    
+  }
+
+  .main__nav a,
+  .right__header a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+  }
+
+  .right__header,
+  .left__header {
+    font-weight: bold;
+    font-size: 1.45rem;
+    font-color: black;
+  }
+
+
+
+
+
+</style>
